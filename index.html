@@ -3,123 +3,46 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
-<meta name="theme-color" content="#f7c9df">
-<title>ROSE CX — Career Quest</title>
+<meta name="theme-color" content="#160b1a">
+<title>ROSE CX — Career Worlds</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="game-shell">
-  <header class="game-hud glass">
-    <div class="hud-chip"><span class="hud-icon">✦</span><b>CAREER QUEST</b></div>
-    <div class="brand">ROSE <strong>CX</strong></div>
-    <div class="hud-chip"><span class="hud-icon">♛</span><b>CCO</b></div>
+<div class="app">
+  <div class="sky" aria-hidden="true">
+    <i class="star a"></i><i class="star b"></i><i class="star c"></i><i class="star d"></i><i class="star e"></i>
+    <div class="aurora one"></div><div class="aurora two"></div>
+  </div>
+  <header class="hud">
+    <button class="hud-btn back-btn" id="backBtn" aria-label="العودة"><span>‹</span></button>
+    <div class="logo">ROSE <b>CX</b><small>CAREER WORLDS</small></div>
+    <button class="hud-btn crown-btn" id="finalBtn" aria-label="المستوى النهائي"><span>♛</span></button>
   </header>
-
-  <main class="saga-map">
-    <section class="map-hero">
-      <div class="spark s1">✦</div><div class="spark s2">✧</div><div class="spark s3">✦</div>
-      <div class="map-kicker">YOUR CAREER SAGA</div>
-      <h1>اختاري عالمك</h1>
-      <div class="start-stage">
-        <div class="you-are-here">أنتِ هنا</div>
-        <button class="level-node current-node" aria-label="Customer Service Call Center">
-          <span class="level-core">★</span>
-          <span class="level-ring"></span>
-        </button>
-        <div class="stage-name start-name">Customer Service<br><b>Call Center</b></div>
+  <main class="screens">
+    <section class="screen hub-screen active" id="hub">
+      <div class="hub-copy"><span class="eyebrow">CURRENT POSITION</span><h1>اختاري طريقك</h1></div>
+      <div class="career-hub">
+        <svg class="hub-lines" viewBox="0 0 390 590" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="beam" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9bd2"/><stop offset=".5" stop-color="#ffffff"/><stop offset="1" stop-color="#b99cff"/></linearGradient></defs><path d="M195 296 C130 245 110 190 86 124"/><path d="M195 296 C260 245 282 190 305 124"/><path d="M195 296 C112 292 82 292 48 292"/><path d="M195 296 C278 292 308 292 342 292"/><path d="M195 296 C135 350 113 405 88 468"/><path d="M195 296 C255 350 278 405 302 468"/></svg>
+        <button class="portal p-lead" data-world="leadership"><span class="portal-ring"></span><span class="portal-gem">L</span><b>Leadership<br>& Operations</b></button>
+        <button class="portal p-quality" data-world="quality"><span class="portal-ring"></span><span class="portal-gem">Q</span><b>Quality &<br>Service Excellence</b></button>
+        <button class="portal p-complaints" data-world="complaints"><span class="portal-ring"></span><span class="portal-gem">C</span><b>Complaints &<br>Escalations</b></button>
+        <button class="portal p-wfm" data-world="wfm"><span class="portal-ring"></span><span class="portal-gem">W</span><b>Workforce<br>Management</b></button>
+        <button class="portal p-cx" data-world="cx"><span class="portal-ring"></span><span class="portal-gem">CX</span><b>Customer<br>Experience</b></button>
+        <button class="portal p-training" data-world="training"><span class="portal-ring"></span><span class="portal-gem">T</span><b>Training &<br>Development</b></button>
+        <div class="home-island"><div class="island-top"><div class="current-orb"><span>★</span></div><div class="current-label">Customer Service<br><b>Call Center</b></div></div><div class="island-rock"></div></div>
       </div>
-      <div class="trunk"><i></i><i></i><i></i></div>
-      <div class="portal-title">اختاري المسار</div>
+      <div class="swipe-hint"><span>✦</span> اختاري بوابة للانتقال <span>✦</span></div>
     </section>
-
-    <section class="world leadership" data-world="01">
-      <div class="world-decor blob-a"></div><div class="world-decor blob-b"></div>
-      <div class="world-banner"><span>WORLD 01</span><b>Leadership & Operations</b></div>
-      <svg class="trail" viewBox="0 0 360 570" preserveAspectRatio="none" aria-hidden="true"><path d="M180 8 C70 80,75 150,180 185 S300 290,185 330 S70 430,180 555"/></svg>
-      <div class="stage p1"><button class="level-node unlocked"><span class="level-core">1</span></button><div class="stage-name">Contact Center<br><b>Team Leader</b></div></div>
-      <div class="stage p2"><button class="level-node locked"><span class="lock">◆</span><span class="level-core">2</span></button><div class="stage-name">Contact Center<br><b>Supervisor</b></div></div>
-      <div class="stage p3"><button class="level-node locked"><span class="lock">◆</span><span class="level-core">3</span></button><div class="stage-name">Operations<br><b>Manager</b></div></div>
-      <div class="stage p4"><button class="level-node castle"><span class="level-core">4</span></button><div class="stage-name">Contact Center<br><b>Manager</b></div></div>
-    </section>
-
-    <section class="world quality" data-world="02">
-      <div class="world-decor blob-a"></div><div class="world-decor blob-b"></div>
-      <div class="world-banner"><span>WORLD 02</span><b>Quality & Service Excellence</b></div>
-      <svg class="trail" viewBox="0 0 360 680" preserveAspectRatio="none" aria-hidden="true"><path d="M180 8 C290 75,292 155,180 190 S55 285,180 335 S292 430,180 480 S70 570,180 665"/></svg>
-      <div class="stage p1"><button class="level-node unlocked"><span class="level-core">1</span></button><div class="stage-name">Quality<br><b>Analyst</b></div></div>
-      <div class="stage p2"><button class="level-node locked"><span class="lock">◆</span><span class="level-core">2</span></button><div class="stage-name">Senior Quality<br><b>Analyst</b></div></div>
-      <div class="stage p3"><button class="level-node locked"><span class="lock">◆</span><span class="level-core">3</span></button><div class="stage-name">Quality<br><b>Supervisor</b></div></div>
-      <div class="stage p4"><button class="level-node locked"><span class="lock">◆</span><span class="level-core">4</span></button><div class="stage-name">Quality<br><b>Manager</b></div></div>
-      <div class="stage p5"><button class="level-node castle"><span class="level-core">5</span></button><div class="stage-name">Service Excellence<br><b>Manager</b></div></div>
-    </section>
-
-    <section class="world complaints" data-world="03">
-      <div class="world-decor blob-a"></div><div class="world-decor blob-b"></div>
-      <div class="world-banner"><span>WORLD 03</span><b>Complaints & Escalations</b></div>
-      <svg class="trail" viewBox="0 0 360 570" preserveAspectRatio="none" aria-hidden="true"><path d="M180 8 C75 75,65 160,180 195 S300 295,180 340 S65 450,180 555"/></svg>
-      <div class="stage p1"><button class="level-node unlocked"><span class="level-core">1</span></button><div class="stage-name">Complaints & Escalations<br><b>Specialist</b></div></div>
-      <div class="stage p2"><button class="level-node locked"><span class="lock">◆</span><span class="level-core">2</span></button><div class="stage-name">Senior Complaints<br><b>Specialist</b></div></div>
-      <div class="stage p3"><button class="level-node locked"><span class="lock">◆</span><span class="level-core">3</span></button><div class="stage-name">Complaints<br><b>Supervisor</b></div></div>
-      <div class="stage p4"><button class="level-node castle"><span class="level-core">4</span></button><div class="stage-name">Complaints & CX<br><b>Manager</b></div></div>
-    </section>
-
-    <section class="world wfm" data-world="04">
-      <div class="world-decor blob-a"></div><div class="world-decor blob-b"></div>
-      <div class="world-banner"><span>WORLD 04</span><b>Workforce Management</b></div>
-      <svg class="trail" viewBox="0 0 360 680" preserveAspectRatio="none" aria-hidden="true"><path d="M180 8 C285 75,300 155,180 195 S65 285,180 335 S300 430,180 480 S70 575,180 665"/></svg>
-      <div class="stage p1"><button class="level-node bridge"><span class="level-core">1</span></button><div class="stage-name">Real-Time Analyst<br><b>RTA</b></div></div>
-      <div class="stage p2"><button class="level-node locked"><span class="lock">◆</span><span class="level-core">2</span></button><div class="stage-name">WFM Analyst<br><b>Scheduler</b></div></div>
-      <div class="stage p3"><button class="level-node locked"><span class="lock">◆</span><span class="level-core">3</span></button><div class="stage-name">WFM Planner<br><b>Senior WFM</b></div></div>
-      <div class="stage p4"><button class="level-node locked"><span class="lock">◆</span><span class="level-core">4</span></button><div class="stage-name">WFM<br><b>Supervisor</b></div></div>
-      <div class="stage p5"><button class="level-node castle"><span class="level-core">5</span></button><div class="stage-name">WFM<br><b>Manager</b></div></div>
-    </section>
-
-    <section class="world cx" data-world="05">
-      <div class="world-decor blob-a"></div><div class="world-decor blob-b"></div>
-      <div class="world-banner"><span>WORLD 05</span><b>Customer Experience</b></div>
-      <svg class="trail" viewBox="0 0 360 470" preserveAspectRatio="none" aria-hidden="true"><path d="M180 8 C65 80,70 165,180 205 S300 330,180 455"/></svg>
-      <div class="stage p1"><button class="level-node bridge"><span class="level-core">1</span></button><div class="stage-name">Customer Experience<br><b>Specialist</b></div></div>
-      <div class="stage p2"><button class="level-node locked"><span class="lock">◆</span><span class="level-core">2</span></button><div class="stage-name">Senior CX<br><b>Specialist</b></div></div>
-      <div class="stage p3"><button class="level-node castle"><span class="level-core">3</span></button><div class="stage-name">Customer Experience<br><b>Manager</b></div></div>
-    </section>
-
-    <section class="world training" data-world="06">
-      <div class="world-decor blob-a"></div><div class="world-decor blob-b"></div>
-      <div class="world-banner"><span>WORLD 06</span><b>Training & Development</b></div>
-      <svg class="trail" viewBox="0 0 360 570" preserveAspectRatio="none" aria-hidden="true"><path d="M180 8 C290 75,295 160,180 195 S65 295,180 340 S295 450,180 555"/></svg>
-      <div class="stage p1"><button class="level-node bridge"><span class="level-core">1</span></button><div class="stage-name">Contact Center<br><b>Trainer</b></div></div>
-      <div class="stage p2"><button class="level-node locked"><span class="lock">◆</span><span class="level-core">2</span></button><div class="stage-name">Senior Trainer<br><b>Training Specialist</b></div></div>
-      <div class="stage p3"><button class="level-node locked"><span class="lock">◆</span><span class="level-core">3</span></button><div class="stage-name">Training<br><b>Supervisor</b></div></div>
-      <div class="stage p4"><button class="level-node castle"><span class="level-core">4</span></button><div class="stage-name">Training<br><b>Manager</b></div></div>
-    </section>
-
-    <section class="executive-world">
-      <div class="cloud c1"></div><div class="cloud c2"></div>
-      <div class="world-banner executive-banner"><span>FINAL WORLD</span><b>Executive Leadership</b></div>
-      <div class="exec-map">
-        <svg class="exec-lines" viewBox="0 0 360 650" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M90 25 C90 90 95 115 90 155 M270 25 C270 90 265 115 270 155 M90 155 C90 225 100 250 90 300 M270 155 C270 225 260 250 270 300 M90 300 C90 370 110 395 145 430 M270 300 C270 370 250 395 215 430 M145 430 C160 470 170 485 180 515 M215 430 C200 470 190 485 180 515"/>
-        </svg>
-        <div class="exec-stage e1"><button class="level-node elite"><span class="level-core">H</span></button><div class="stage-name">Head of Customer<br><b>Operations</b></div></div>
-        <div class="exec-stage e2"><button class="level-node elite"><span class="level-core">H</span></button><div class="stage-name">Head of Customer<br><b>Experience</b></div></div>
-        <div class="exec-stage e3"><button class="level-node elite"><span class="level-core">D</span></button><div class="stage-name">Director of Customer<br><b>Operations</b></div></div>
-        <div class="exec-stage e4"><button class="level-node elite"><span class="level-core">D</span></button><div class="stage-name">Director of Customer<br><b>Experience</b></div></div>
-        <div class="exec-stage e5"><button class="level-node elite"><span class="level-core">VP</span></button><div class="stage-name">VP Customer<br><b>Operations</b></div></div>
-        <div class="exec-stage e6"><button class="level-node elite"><span class="level-core">VP</span></button><div class="stage-name">VP Customer<br><b>Experience</b></div></div>
-        <div class="boss-stage">
-          <div class="boss-label">FINAL BOSS</div>
-          <button class="level-node boss-node"><span class="crown">♛</span></button>
-          <div class="stage-name boss-name">Chief Customer Officer<br><b>CCO / CXO</b></div>
-        </div>
-      </div>
-    </section>
+    <section class="screen world-screen" id="leadership" data-index="1"><div class="world-top"><span class="world-no">WORLD 01</span><h2>Leadership & Operations</h2></div><div class="map-zone four"><svg class="route" viewBox="0 0 390 690" preserveAspectRatio="none"><path d="M194 642 C80 580 82 492 205 446 S320 328 187 280 S82 150 196 74"/></svg><div class="level l1 available"><button><span>1</span></button><b>Contact Center<br>Team Leader</b></div><div class="level l2"><button><span>2</span></button><b>Contact Center<br>Supervisor</b></div><div class="level l3"><button><span>3</span></button><b>Operations<br>Manager</b></div><div class="level l4 boss"><button><span>♜</span></button><b>Contact Center<br>Manager</b></div></div></section>
+    <section class="screen world-screen" id="quality" data-index="2"><div class="world-top"><span class="world-no">WORLD 02</span><h2>Quality & Service Excellence</h2></div><div class="map-zone five"><svg class="route" viewBox="0 0 390 720" preserveAspectRatio="none"><path d="M195 680 C305 620 306 540 184 496 S70 395 198 350 S315 250 185 204 S80 115 196 50"/></svg><div class="level l1 available"><button><span>1</span></button><b>Quality<br>Analyst</b></div><div class="level l2"><button><span>2</span></button><b>Senior Quality<br>Analyst</b></div><div class="level l3"><button><span>3</span></button><b>Quality<br>Supervisor</b></div><div class="level l4"><button><span>4</span></button><b>Quality<br>Manager</b></div><div class="level l5 boss"><button><span>♜</span></button><b>Service Excellence<br>Manager</b></div></div></section>
+    <section class="screen world-screen" id="complaints" data-index="3"><div class="world-top"><span class="world-no">WORLD 03</span><h2>Complaints & Escalations</h2></div><div class="map-zone four"><svg class="route" viewBox="0 0 390 690" preserveAspectRatio="none"><path d="M194 642 C300 582 307 495 184 445 S73 330 205 282 S308 150 194 72"/></svg><div class="level l1 available"><button><span>1</span></button><b>Complaints & Escalations<br>Specialist</b></div><div class="level l2"><button><span>2</span></button><b>Senior Complaints<br>Specialist</b></div><div class="level l3"><button><span>3</span></button><b>Complaints<br>Supervisor</b></div><div class="level l4 boss"><button><span>♜</span></button><b>Complaints & CX<br>Manager</b></div></div></section>
+    <section class="screen world-screen" id="wfm" data-index="4"><div class="world-top"><span class="world-no">WORLD 04</span><h2>Workforce Management</h2></div><div class="map-zone five"><svg class="route" viewBox="0 0 390 720" preserveAspectRatio="none"><path d="M195 680 C75 620 78 540 205 496 S320 395 188 350 S74 250 205 204 S306 115 194 50"/></svg><div class="level l1 bridge"><button><span>1</span></button><b>Real-Time Analyst<br>RTA</b></div><div class="level l2"><button><span>2</span></button><b>WFM Analyst<br>Scheduler</b></div><div class="level l3"><button><span>3</span></button><b>WFM Planner<br>Senior WFM</b></div><div class="level l4"><button><span>4</span></button><b>WFM<br>Supervisor</b></div><div class="level l5 boss"><button><span>♜</span></button><b>WFM<br>Manager</b></div></div></section>
+    <section class="screen world-screen" id="cx" data-index="5"><div class="world-top"><span class="world-no">WORLD 05</span><h2>Customer Experience</h2></div><div class="map-zone three"><svg class="route" viewBox="0 0 390 620" preserveAspectRatio="none"><path d="M195 572 C72 500 82 386 206 322 S305 165 195 65"/></svg><div class="level l1 bridge"><button><span>1</span></button><b>Customer Experience<br>Specialist</b></div><div class="level l2"><button><span>2</span></button><b>Senior CX<br>Specialist</b></div><div class="level l3 boss"><button><span>♜</span></button><b>Customer Experience<br>Manager</b></div></div></section>
+    <section class="screen world-screen" id="training" data-index="6"><div class="world-top"><span class="world-no">WORLD 06</span><h2>Training & Development</h2></div><div class="map-zone four"><svg class="route" viewBox="0 0 390 690" preserveAspectRatio="none"><path d="M194 642 C80 582 78 495 205 445 S318 330 185 282 S80 150 196 72"/></svg><div class="level l1 bridge"><button><span>1</span></button><b>Contact Center<br>Trainer</b></div><div class="level l2"><button><span>2</span></button><b>Senior Trainer<br>Training Specialist</b></div><div class="level l3"><button><span>3</span></button><b>Training<br>Supervisor</b></div><div class="level l4 boss"><button><span>♜</span></button><b>Training<br>Manager</b></div></div></section>
+    <section class="screen world-screen final-screen" id="executive" data-index="7"><div class="world-top"><span class="world-no gold">FINAL WORLD</span><h2>Executive Leadership</h2></div><div class="final-map"><svg class="final-routes" viewBox="0 0 390 720" preserveAspectRatio="none"><path d="M92 640 C92 570 92 525 92 470 S92 350 92 295 S125 210 164 160"/><path d="M298 640 C298 570 298 525 298 470 S298 350 298 295 S265 210 226 160"/><path d="M164 160 C175 125 184 100 195 72 M226 160 C215 125 206 100 195 72"/></svg><div class="exec-node left h"><button><span>H</span></button><b>Head of Customer<br>Operations</b></div><div class="exec-node right h"><button><span>H</span></button><b>Head of Customer<br>Experience</b></div><div class="exec-node left d"><button><span>D</span></button><b>Director of Customer<br>Operations</b></div><div class="exec-node right d"><button><span>D</span></button><b>Director of Customer<br>Experience</b></div><div class="exec-node left vp"><button><span>VP</span></button><b>VP Customer<br>Operations</b></div><div class="exec-node right vp"><button><span>VP</span></button><b>VP Customer<br>Experience</b></div><div class="final-boss"><div class="boss-aura"></div><button><span>♛</span></button><div>Chief Customer Officer<br><b>CCO / CXO</b></div></div></div></section>
   </main>
-
-  <nav class="game-dock glass">
-    <button data-jump="top"><span>⌂</span><b>البداية</b></button>
-    <button data-jump="worlds" class="active"><span>◈</span><b>العوالم</b></button>
-    <button data-jump="boss"><span>♛</span><b>القمة</b></button>
-  </nav>
+  <div class="world-dots" id="worldDots" aria-label="العوالم"><button class="active" data-go="hub"></button><button data-go="leadership"></button><button data-go="quality"></button><button data-go="complaints"></button><button data-go="wfm"></button><button data-go="cx"></button><button data-go="training"></button><button data-go="executive"></button></div>
+  <div class="transition" id="transition"><div class="warp"></div><span>✦</span></div>
 </div>
 <script src="app.js"></script>
 </body>
