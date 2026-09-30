@@ -1,1 +1,117 @@
-<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f7d6e7"><title>ROSE CX — Career Quest</title><link rel="stylesheet" href="styles.css"></head><body><div class="app"><div class="top"><div class="topbar glass"><div class="logo">ROSE <b>CX</b></div><div class="rolebox"><small>أنا الآن</small><select id="currentRole"></select></div></div></div><section id="mapPage" class="listpage on"><div class="hero"><div class="eyebrow">CAREER QUEST</div><h1>كل وظيفة = مرحلة.</h1><p id="heroText"></p></div><div id="mission" class="mission glass"></div><div class="hud"><div class="stat glass"><b id="passedCount">0</b><small>مراحل مجتازة</small></div><div class="stat glass"><b id="availableCount">0</b><small>خيارات قريبة</small></div><div class="stat glass"><b id="overall">0%</b><small>جاهزية المسار</small></div></div><div class="section-title"><h2>خريطة المسار</h2><small>اضغطي أي مرحلة</small></div><div id="careerMap" class="map"></div></section><section id="certPage" class="listpage"><div class="hero"><div class="eyebrow">CERTIFICATION VAULT</div><h1>الشهادات في وقتها.</h1><p>الشهادة تظهر مع توقيتها وقيمتها للمسار؛ لا تجمعي شهادات بلا هدف.</p></div><div id="certCatalog" class="catalog"></div></section><section id="skillPage" class="listpage"><div class="hero"><div class="eyebrow">SKILL LAB</div><h1>المهارات التي تفتح المراحل.</h1><p>مهارات التشغيل والجودة وWFM وCX والتحليل والقيادة.</p></div><div id="skillCatalog" class="catalog"></div></section></div><div class="bottom-nav glass"><button class="navbtn active" data-page="mapPage">الخريطة</button><button class="navbtn" data-page="skillPage">المهارات</button><button class="navbtn" data-page="certPage">الشهادات</button></div><div id="sheetBack" class="sheetback"><div class="sheet"><div class="handle"></div><div class="sheethead"><div id="sheetIcon" class="bigicon">🎯</div><div><h2 id="sheetTitle"></h2><p id="sheetSub"></p></div><button id="closeSheet" class="close">×</button></div><div class="verdict"><div><b id="verdictTitle"></b><br><span id="verdictText"></span></div><div id="readyScore" class="score">0%</div></div><div class="tabs"><button class="tab on" data-detail="overview">المرحلة</button><button class="tab" data-detail="skills">المهارات</button><button class="tab" data-detail="evidence">الإثبات</button><button class="tab" data-detail="learn">التعلم</button><button class="tab" data-detail="certs">الشهادات</button><button class="tab" data-detail="quiz">اختبار صعب</button><button class="tab" data-detail="interview">الانترفيو</button></div><div id="detail-overview" class="detail on"></div><div id="detail-skills" class="detail"></div><div id="detail-evidence" class="detail"></div><div id="detail-learn" class="detail"></div><div id="detail-certs" class="detail"></div><div id="detail-quiz" class="detail"></div><div id="detail-interview" class="detail"></div></div></div><script src="data1.js"></script><script src="data2a.js"></script><script src="data2b.js"></script><script src="support.js"></script><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f7c8df">
+<title>ROSE CX — Career Map</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="shell">
+  <header class="hud glass">
+    <div class="brand">ROSE <b>CX</b></div>
+    <div class="hud-title">CAREER MAP</div>
+    <div class="level-orb">04Y</div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <span class="quest-tag">CAREER QUEST</span>
+      <h1>اختاري مسارك.</h1>
+    </section>
+
+    <section class="map-wrap">
+      <div class="world-line"></div>
+
+      <div class="checkpoint start">
+        <span class="checkpoint-label">START</span>
+        <button class="node current">
+          <span class="node-orb">★</span>
+          <span class="node-name">Customer Service<br>Call Center</span>
+        </button>
+      </div>
+
+      <div class="fork-title"><span>✦</span> اختاري التخصص <span>✦</span></div>
+
+      <section class="realm realm-lead">
+        <div class="realm-head"><span>01</span><b>Leadership & Operations</b></div>
+        <div class="path">
+          <button class="node"><span class="node-orb">1</span><span class="node-name">Contact Center<br>Team Leader</span></button>
+          <button class="node"><span class="node-orb">2</span><span class="node-name">Contact Center<br>Supervisor</span></button>
+          <button class="node"><span class="node-orb">3</span><span class="node-name">Operations<br>Manager</span></button>
+          <button class="node"><span class="node-orb">4</span><span class="node-name">Contact Center<br>Manager</span></button>
+          <button class="node"><span class="node-orb">5</span><span class="node-name">Head of Customer<br>Operations</span></button>
+          <button class="node"><span class="node-orb">6</span><span class="node-name">Director of Customer<br>Operations</span></button>
+          <button class="node"><span class="node-orb">7</span><span class="node-name">VP Customer<br>Operations</span></button>
+        </div>
+      </section>
+
+      <section class="realm realm-quality">
+        <div class="realm-head"><span>02</span><b>Quality & Service Excellence</b></div>
+        <div class="path">
+          <button class="node"><span class="node-orb">1</span><span class="node-name">Quality<br>Analyst</span></button>
+          <button class="node"><span class="node-orb">2</span><span class="node-name">Senior Quality<br>Analyst</span></button>
+          <button class="node"><span class="node-orb">3</span><span class="node-name">Quality<br>Supervisor</span></button>
+          <button class="node"><span class="node-orb">4</span><span class="node-name">Quality<br>Manager</span></button>
+          <button class="node merge"><span class="node-orb">5</span><span class="node-name">Service Excellence<br>Manager</span></button>
+        </div>
+      </section>
+
+      <section class="realm realm-complaints">
+        <div class="realm-head"><span>03</span><b>Complaints & Escalations</b></div>
+        <div class="path">
+          <button class="node"><span class="node-orb">1</span><span class="node-name">Complaints & Escalations<br>Specialist</span></button>
+          <button class="node"><span class="node-orb">2</span><span class="node-name">Senior Complaints<br>Specialist</span></button>
+          <button class="node"><span class="node-orb">3</span><span class="node-name">Complaints<br>Supervisor</span></button>
+          <button class="node merge"><span class="node-orb">4</span><span class="node-name">Complaints & CX<br>Manager</span></button>
+        </div>
+      </section>
+
+      <section class="realm realm-wfm">
+        <div class="realm-head"><span>04</span><b>Workforce Management</b></div>
+        <div class="path">
+          <button class="node"><span class="node-orb">1</span><span class="node-name">Real-Time Analyst<br>RTA</span></button>
+          <button class="node"><span class="node-orb">2</span><span class="node-name">WFM Analyst<br>Scheduler</span></button>
+          <button class="node"><span class="node-orb">3</span><span class="node-name">WFM Planner<br>Senior WFM</span></button>
+          <button class="node"><span class="node-orb">4</span><span class="node-name">WFM<br>Supervisor</span></button>
+          <button class="node merge"><span class="node-orb">5</span><span class="node-name">WFM<br>Manager</span></button>
+        </div>
+      </section>
+
+      <section class="realm realm-cx">
+        <div class="realm-head"><span>05</span><b>Customer Experience</b></div>
+        <div class="path">
+          <button class="node"><span class="node-orb">1</span><span class="node-name">Customer Experience<br>Specialist</span></button>
+          <button class="node"><span class="node-orb">2</span><span class="node-name">Senior CX<br>Specialist</span></button>
+          <button class="node"><span class="node-orb">3</span><span class="node-name">CX<br>Manager</span></button>
+          <button class="node"><span class="node-orb">4</span><span class="node-name">Head of Customer<br>Experience</span></button>
+          <button class="node"><span class="node-orb">5</span><span class="node-name">Director of Customer<br>Experience</span></button>
+          <button class="node"><span class="node-orb">6</span><span class="node-name">VP Customer<br>Experience</span></button>
+        </div>
+      </section>
+
+      <section class="realm realm-training">
+        <div class="realm-head"><span>06</span><b>Training & Development</b></div>
+        <div class="path">
+          <button class="node"><span class="node-orb">1</span><span class="node-name">Contact Center<br>Trainer</span></button>
+          <button class="node"><span class="node-orb">2</span><span class="node-name">Senior Trainer<br>Training Specialist</span></button>
+          <button class="node"><span class="node-orb">3</span><span class="node-name">Training<br>Supervisor</span></button>
+          <button class="node merge"><span class="node-orb">4</span><span class="node-name">Training<br>Manager</span></button>
+        </div>
+      </section>
+
+      <div class="convergence">
+        <div class="portal-lines"><i></i><i></i><i></i></div>
+        <span class="checkpoint-label">EXECUTIVE PATH</span>
+        <button class="node boss">
+          <span class="crown">♛</span>
+          <span class="node-name">Chief Customer Officer<br><b>CCO / CXO</b></span>
+        </button>
+      </div>
+    </section>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
