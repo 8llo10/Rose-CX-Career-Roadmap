@@ -1,0 +1,17 @@
+{
+  "name": "ROSE CX — Career Worlds",
+  "short_name": "ROSE CX",
+  "description": "Game-style career roadmap for customer experience and contact center professionals.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#160b1a",
+  "theme_color": "#160b1a",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "type": "image/png",
+      "sizes": "any",
+      "purpose": "any maskable"
+    }
+  ]
+}
